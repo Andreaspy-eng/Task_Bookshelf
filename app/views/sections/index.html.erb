@@ -1,0 +1,32 @@
+<div class="d-flex flex-column main-container">
+  <!--<h2 class="align-self-center"></h2>  -->
+  <div class="row sub-container mt-4">
+    <div class="col-6" >
+      <div class="container-fluid"> 
+        <button type="button" class="btn btn-success" onclick="showCreateSectionsPopup()">Create</button>
+        <button type="button" class="btn btn-warning" onclick="showEditSectionsPopup()">Edit</button>
+        <button type="button" class="btn btn-danger"onclick="showDeleteSections()">Delete</button>
+     </div> 
+      <% @sections.each_with_index do |section, index| %>
+        <div class="section<% if index != 0 %> mt-4<% end %>">
+          <a href="javascript:void(0)"><%= section.name %></a>
+        </div>
+      <% end %>
+    </div>
+    
+    <div class="col-6">
+      <div class="container-fluid" >
+        <button type="button" class="btn btn-success" onclick="showCreateBooksPopup()">Create</button>
+        <button type="button" class="btn btn-warning" onclick="showEditBooksPopup()">Edit</button>
+        <button type="button" class="btn btn-danger" onclick="showDeleteBooks()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render partial: 'create_sections_popup' %>
+<%= render partial: 'create_books_popup' %>
+<%= render partial: 'edit_sections_popup'%>
+<%= render partial: 'edit_books_popup'%>
+<%= render partial: 'delete_sections'%>
+<%= render partial: 'delete_books'%> 

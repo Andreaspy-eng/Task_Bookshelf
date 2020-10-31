@@ -1,0 +1,11 @@
+<div id="<%= sections.id.to_s %>" class="sections-item">
+  <div class="sections-title">
+    <h4><%= sections.title %></h4>
+  </div>
+  <div class="sections-body">
+    <span><%= sections.body %></span>
+  </div>
+  <div class="sections-created-at">
+    <b>Created at: </b><%= sections.created_at.strftime('%d_%m_%Y %H_%M') %>
+  </div>
+</div>
