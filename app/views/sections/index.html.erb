@@ -2,24 +2,29 @@
   <!--<h2 class="align-self-center"></h2>  -->
   <div class="row sub-container mt-4">
     <div class="col-6" >
-      <div class="container-fluid"> 
-        <button type="button" class="btn btn-success" onclick="showCreateSectionsPopup()">Create</button>
-        <button type="button" class="btn btn-warning" onclick="showEditSectionsPopup()">Edit</button>
-        <button type="button" class="btn btn-danger"onclick="showDeleteSections()">Delete</button>
-     </div> 
-      <% @sections.each_with_index do |section, index| %>
-        <div class="section<% if index != 0 %> mt-4<% end %>">
-          <a href="javascript:void(0)"><%= section.name %></a>
-        </div>
-      <% end %>
+      <div class="text-center"> 
+        <button type="button" class="btn btn-success" onclick="showCreateSectionsPopup()">Create section</button>
+        <button type="button" class="btn btn-warning" onclick="showEditSectionsPopup()">Edit section</button>
+        <button type="button" class="btn btn-danger" onclick="showDeleteSectionsPopup()">Delete section</button>
+      </div> 
+      <ul class="section-list list-group mt-4" id="list_tab">
+        <% @sections.each do |section| %>
+          <li class="list-group-item section" id="<%= section.id.to_s %>" onclick="chooseSection(this)"><%= section.name %></li>
+        <% end %>
+      </ul>
     </div>
     
     <div class="col-6">
-      <div class="container-fluid" >
-        <button type="button" class="btn btn-success" onclick="showCreateBooksPopup()">Create</button>
-        <button type="button" class="btn btn-warning" onclick="showEditBooksPopup()">Edit</button>
-        <button type="button" class="btn btn-danger" onclick="showDeleteBooks()">Delete</button>
+      <div class="text-center" >
+        <button type="button" class="btn btn-success" onclick="showCreateBooksPopup()">Create book</button>
+        <button type="button" class="btn btn-warning" onclick="showEditBooksPopup()">Edit book</button>
+        <button type="button" class="btn btn-danger" onclick="showDeleteBooksPopup()">Delete book</button>
       </div>
+      <ul class="book-list list-group mt-4" id="list_tab">
+      <%# @books.each do |book| %>
+        <!-- <li class="list-group-item book" id="<%#= book.id.to_s %>" onclick="chooseSection(this)"><%#= book.name %></li> -->
+      <%# end %>
+      </ul>
     </div>
   </div>
 </div>
@@ -28,5 +33,5 @@
 <%= render partial: 'create_books_popup' %>
 <%= render partial: 'edit_sections_popup'%>
 <%= render partial: 'edit_books_popup'%>
-<%= render partial: 'delete_sections'%>
-<%= render partial: 'delete_books'%> 
+<%= render partial: 'delete_sections_popup'%>
+<%= render partial: 'delete_books_popup'%> 

@@ -1,34 +1,34 @@
 {
-  "application.js": "/packs/js/application-0c653d33439505020ea6.js",
-  "application.js.map": "/packs/js/application-0c653d33439505020ea6.js.map",
-  "books.js": "/packs/js/books-cb445d2fb30a6a4cd249.js",
-  "books.js.map": "/packs/js/books-cb445d2fb30a6a4cd249.js.map",
+  "application.js": "/packs/js/application-5267f1ec1bd075c6df39.js",
+  "application.js.map": "/packs/js/application-5267f1ec1bd075c6df39.js.map",
+  "books.js": "/packs/js/books-17fcfc7272946d6afe79.js",
+  "books.js.map": "/packs/js/books-17fcfc7272946d6afe79.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-0c653d33439505020ea6.js"
+        "/packs/js/application-5267f1ec1bd075c6df39.js"
       ],
       "js.map": [
-        "/packs/js/application-0c653d33439505020ea6.js.map"
+        "/packs/js/application-5267f1ec1bd075c6df39.js.map"
       ]
     },
     "books": {
       "js": [
-        "/packs/js/books-cb445d2fb30a6a4cd249.js"
+        "/packs/js/books-17fcfc7272946d6afe79.js"
       ],
       "js.map": [
-        "/packs/js/books-cb445d2fb30a6a4cd249.js.map"
+        "/packs/js/books-17fcfc7272946d6afe79.js.map"
       ]
     },
     "sections": {
       "js": [
-        "/packs/js/sections-18ed1b76143b3b287e24.js"
+        "/packs/js/sections-5aa26ff137b348175e6b.js"
       ],
       "js.map": [
-        "/packs/js/sections-18ed1b76143b3b287e24.js.map"
+        "/packs/js/sections-5aa26ff137b348175e6b.js.map"
       ]
     }
   },
-  "sections.js": "/packs/js/sections-18ed1b76143b3b287e24.js",
-  "sections.js.map": "/packs/js/sections-18ed1b76143b3b287e24.js.map"
+  "sections.js": "/packs/js/sections-5aa26ff137b348175e6b.js",
+  "sections.js.map": "/packs/js/sections-5aa26ff137b348175e6b.js.map"
 }

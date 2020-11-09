@@ -4,5 +4,5 @@ class Book
 
   field :name, type: String
 
-  belongs_to :section, class_name: 'Section', inverse_of: :book
+  belongs_to :section, class_name: 'Section', inverse_of: :books
 end

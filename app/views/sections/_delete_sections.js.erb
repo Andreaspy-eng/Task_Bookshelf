@@ -1,0 +1,3 @@
+$('.sections-container').remove('<%= escape_javascript( render partial: 'sections_item', formats: [:html], locals: {
+  sections: @sections
+} ) %>');

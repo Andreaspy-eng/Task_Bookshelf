@@ -3,25 +3,42 @@ class SectionsController < ApplicationController
     @sections = Section.all 
   end
 
-  def create_sections
+  def create
     name = params[:title]
+    # @dest_section = Section.find(params[:section_id])
 
-    @section = Sections.new
-    @section.name = title
-    @section.save
+    @new_section = Section.new
+    @new_section.name = name
+    @new_section.save
 
-    section = Section.find(params[:section_id])
+    # @dest_section.child_sections << @new_section
   end
 
-  def edit_sections
+  def edit
     section = Section.find(params[:id])
 
-    section.name = params[:name]
-    section.save
   end
 
-  def delete_sections
+  def update
+    section = Section.find(params[:id])
+    name = params[:title]
+    render json: { ok: false } unless section && name
+    
+    section.name = name
+    section.save
+
+    render json: { ok: true }
+  end
+
+  def destroy
     section = Section.find(params[:id])
     section.destroy
+  end
+
+  def show_books
+    section = Section.find(params[:section_id])
+    @books = section.books
+
+    render partial: 'books', formats: [:js]
   end
 end
